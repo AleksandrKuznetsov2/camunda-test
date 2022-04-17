@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: camunda-test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: localhost
+    port: 1025
+
+camunda:
+  bpm:
+    admin-user:
+      id: demo
+      password: demo
+      firstName: Demo
+      filter:
+        create: All tasks
+
+imaginary:
+  base-path: http://localhost:9000

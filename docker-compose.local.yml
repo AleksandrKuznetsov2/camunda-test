@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+  smtp:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+  imaginary:
+    image: h2non/imaginary
+    ports:
+      - "9000:9000"
+    environment:
+      PORT: 9000
+    command: -enable-url-source
